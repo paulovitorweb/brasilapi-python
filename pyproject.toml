@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "brasilapi"
+version = "0.1.0"
+description = "Python async client for BrasilAPI"
+authors = ["Paulo Freitas <paulogeo5@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/paulovitorweb/brasilapi-python"
+documentation = "https://github.com/paulovitorweb/brasilapi-python"
+repository = "https://github.com/paulovitorweb/brasilapi-python"
+license = "MIT"
+packages = [{ include = "brasilapi" }]
+keywords = ["brasilapi", "http", "asyncio"]
+classifiers = [
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Utilities",
+    "Framework :: AsyncIO",
+    "Framework :: aiohttp",
+    "Framework :: Pydantic :: 2",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.8.6"
+pydantic = "^2.4.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.1"
+pytest-mock = "^3.11.1"
+ruff = "^0.0.280"
+black = "^23.7.0"
+pytest-cov = "^4.1.0"
+coverage-badge = "^1.1.0"
+
+[tool.black]
+line-length = 119
+
+[tool.ruff]
+line-length = 119
+
+[tool.coverage.run]
+source = ["./*"]
+omit = ["brasilapi/http/__init__.py"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=brasilapi --cov-report=html --cov-report=term tests -vv"
+asyncio_mode = "auto"
+pythonpath = ["."]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
