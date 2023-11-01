@@ -7,6 +7,9 @@
   <p>
     <img src="https://github.com/paulovitorweb/brasilapi-python/actions/workflows/test.yml/badge.svg"></img> 
     <img src="./coverage.svg"></img>
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/brasilapi">
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/brasilapi">
+    <img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dw/brasilapi">
   </p>
 </div>
 
